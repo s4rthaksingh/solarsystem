@@ -60,6 +60,19 @@ function rotateaboutsun(planet){
     planet.position.z = Math.sin(planet.angle) * planet.distance;
 }
 
+window.addEventListener('keydown',(e)=>{
+    if(e.key==='='){
+        planets.forEach(planet => {
+            planet.omega *= 1.1;
+        });
+    }
+    if(e.key==='-'){
+    planets.forEach(planet => {
+        planet.omega *= 0.9;
+    });
+    }
+})
+
 function animate(){
     sun.rotation.x += 0.1;
     planets.forEach(rotateaboutsun);
