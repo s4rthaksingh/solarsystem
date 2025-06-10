@@ -13,3 +13,7 @@ body{ margin: 0; }
     z-index: 10;
     pointer-events: none;
 }
+
+#legend input, #legend label {
+    pointer-events: auto;
+}

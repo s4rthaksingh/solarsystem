@@ -11,33 +11,61 @@
       Press <b>O</b> – Toggle Orbits<br>
       Press <b>S</b> – Toggle Galaxy<br>
       Press <b>Plus(+)</b> / <b>Minus(-)</b> – Speed Up / Slow Down<br>
+      <div><label for="realisticcheck">Realistic mode</label>
+      <input type="checkbox" name="realisticcheck" id="realisticcheck">
+      </div>
     </div>
-
+    
+    <div id="realistic-mode-message" style="
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: none;
+      background: rgba(255, 193, 7, 0.9);
+      color: black;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: sans-serif;
+      font-size: 14px;
+      z-index: 101;
+      border: 2px solid #ffc107;
+    ">
+      <strong>⚠️ Realistic Mode</strong><br>
+      Planet editing is disabled
+    </div>
+    
     <div id="planet-popup" style="
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: none;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    pointer-events: auto;
-    z-index: 100;
-    font-family: sans-serif;
-    width: 200px;
-  ">
-    <h3 id="popup-title"></h3>
-    <label>Distance : 
-      <input type="range" name="distance" id="distance" min="1" max="50" step="0.1">
-    </label>
-    <br>
-    <label>Speed : 
-      <input type="range" name="omega" id="omega" min="0.00001" max="0.1" step="0.001">
-    </label>
-    <br>
-    <button id="popup-close">Close</button>
-    <button id="popup-reset">Reset</button>
-  </div>
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: none;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      pointer-events: auto;
+      z-index: 100;
+      font-family: sans-serif;
+      width: 200px;
+    ">
+      <h3 id="popup-title"></h3>
+      <label>Distance :
+        <input type="range" name="distance" id="distance" min="1" max="50" step="0.1">
+      </label>
+      <br>
+      <label>Speed :
+        <input type="range" name="omega" id="omega" min="0.00001" max="0.1" step="0.001">
+      </label>
+      <br>
+      <label>Radius :
+        <input type="range" name="radius" id="radius" min="0.1" max="10" step="0.1">
+      </label>
+      <br>
+      <label id="followmodelabel" for="followmode"></label>
+      <input type="checkbox" name="followmode" id="followmode"><br>
+     
+      <button id="popup-close">Close</button>
+      <button id="popup-reset">Reset</button>
+    </div>
   </body>
 </html>
