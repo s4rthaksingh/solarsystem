@@ -79,6 +79,7 @@ let neptune = createPlanet({ name: 'neptune', radius: 1.0, distance: 30, omega: 
 // const stars = createPlanet({ name: 'stars', radius: 1000.0, distance: 0, omega: 0.0, startangle: 0, orbitthickness: 0.0, orbitcolor: 0x3366ff });
 document.getElementById("realisticcheck").checked = false;
 document.getElementById("realisticcheck").addEventListener('change',()=>{
+    removehighlight();
     let popup = document.getElementById('planet-popup');
     let message = document.getElementById('realistic-mode-message')
     if (document.getElementById("realisticcheck").checked == false){
@@ -231,6 +232,12 @@ function createhighlight(planet){
     highlight = new THREE.Mesh(highlightgeo,highlightmat);
     highlightedplanet = planet;
     scene.add(highlight);
+}
+
+function removehighlight(){
+    if(highlight) scene.remove(highlight);
+    highlight = null;
+    highlightedplanet = null;
 }
 
 function updatehighlight(){
