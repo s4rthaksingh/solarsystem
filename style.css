@@ -17,3 +17,13 @@ body{ margin: 0; }
 #legend input, #legend label {
     pointer-events: auto;
 }
+
+#signature-label {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    z-index: 100;
+}
